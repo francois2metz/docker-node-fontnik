@@ -15,7 +15,13 @@ docker build -t docker-node-fontnik .
 You can pull a docker image with the following `docker pull` command.
 
 ```
-docker pull carimaticker/fontnik
+docker pull francois2/fontnik
 ```
 
-Docker Hub page is [here](https://hub.docker.com/r/carimaticker/fontnik/).
+Docker Hub page is [here](https://cloud.docker.com/repository/docker/francois2/fontnik).
+
+## Usage
+
+By default the entrypoint use `build-glyphs`.
+
+    docker run --rm --tty --interactive --volume $(pwd):/data --workdir /data francois2/fontnik ./fonts/open-sans/OpenSans-Regular.ttf ./glyphs
